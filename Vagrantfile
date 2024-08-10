@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "node1" do |node1|
     node1.vm.hostname = "node1"
-    node1.vm.network :private_network, ip: "192.168.1.100"
+    node1.vm.network :private_network, ip: "192.168.5.100"
 	node1.vm.provision "shell", inline: <<-SHELL
       echo "node 1 provision"
     SHELL
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "node2" do |node2|
     node2.vm.hostname = "node2"
-    node2.vm.network :private_network, ip: "192.168.1.101"
+    node2.vm.network :private_network, ip: "192.168.5.101"
 	node2.vm.provision "shell", inline: <<-SHELL
       echo "node 2 provision"
     SHELL
